@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "e0863cbb-e1e2-4f88-b5e2-65b61b9c8b3e",
+		"name": "USERS-APPARTMENT_APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32169102"
+	},
+	"item": [
+		{
+			"name": "GET ALL USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/user",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SINGLE USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/user/assdasd",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"assdasd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SUBROLE USERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/user/role/asdsd",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"role",
+						"asdsd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/user/register",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/user/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/user/AFASF",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"AFASF"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/user/delete-user/65c0b498d733ea6049f98851",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"delete-user",
+						"65c0b498d733ea6049f98851"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE PROFILE PICTURE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzMxODc5Mjk4YjNlZWE2YTM2ZGFmMCIsInVzZXJFbWFpbCI6InJlc2lkZW50MDIiLCJyb2xlIjoicmVzaWRlbnQiLCJpYXQiOjE3MDcyODUwOTQsImV4cCI6MTcwNzM3MTQ5NH0.R3scDTpxyXgeD35BS-Q48AT-93h59zg_SpGYnxmzV-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "profile",
+							"type": "file",
+							"src": "/C:/BLOG-MERN/client/src/images/avatar12.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/user/avator/change-profile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"avator",
+						"change-profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

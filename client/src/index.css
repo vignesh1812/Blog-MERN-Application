@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,100;1,600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary: #6f6af8;
+  --transition: all 300ms ease;
+  --container-width-lg: 84%;
+  --container-width-md: 92%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin-top: 6rem;
+  @apply text-gray-700;
+}
+
+.container-width {
+  @apply w-10/12 m-auto xs:max-md:w-11/12;
+}
+
+.register,
+.login,
+.create-post {
+  @apply w-1/2 m-auto h-[calc-(100vh-12rem)] xs:max-md:w-5/6 text-center;
+}
+.create-post {
+  @apply w-1/2 m-auto h-[calc-(100vh-12rem)] xs:max-lg:w-11/12 text-center;
+}
+
+.register h2,
+.login h2,
+.create-post h2 {
+  @apply mb-8 font-semibold text-3xl xs:max-sm:text-xl;
+}
+.register input,
+.login input,
+.create-post-form input,
+.form.profile-form input,
+select {
+  @apply border-gray-200  focus:border-primary border-2 border-solid;
+}
+.register small,
+.login small,
+.create-post small {
+  @apply block mt-6;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-gray-900 leading-4;
+}
+
+h1 {
+  @apply text-4xl xs:max-md:text-2xl;
+}
+
+h2,
+h3 {
+  @apply text-xl xs:max-sm:text-lg;
+}
+h4 {
+  @apply text-xl;
+}
+
+
+/* ===================================NAVBAR start================================= */
+
+nav{
+  @apply w-screen grid place-items-center bg-primary h-20 fixed top-0 left-0 z-[1] xs:max-md:h-14;
+}
+
+.nav {
+  @apply h-full flex items-center justify-between m-auto  text-white xs:max-md:relative;
+
+}
+
+
+.menu-bar {
+  @apply flex items-center gap-12 xs:max-md:absolute xs:max-md:top-16 xs:max-md:right-0 xs:max-md:flex-col xs:max-md:gap-1;
+}
+
+.menu-bar li{
+  @apply xs:max-md:w-full xs:max-md:bg-white xs:max-md:border-2 xs:max-md:border-solid xs:max-md:border-primary xs:max-md:rounded-sm xs:max-md:shadow 
+}
+.menu-bar li>a{
+  @apply xs:max-md:w-full  xs:max-md:px-10  xs:max-md:text-black
+}
+
+
+  @media (min-width: 320px) {
+    @media not all and (min-width: 778px) {
+      .menu-bar li{
+        animation: dropdown 500ms ease forwards;
+        opacity: 0;
+        transform: rotateX(90deg);
+        transform-origin: top;
+      }
+    }
+  }
+
+
+.nav-button {
+  @apply text-lg  w-fit py-1 px-4 cursor-pointer font-semibold transition duration-300 bg-transparent text-white rounded-sm hidden xs:max-md:inline-block xs:max-md:text-2xl  ;
+}
+ 
+
+
+.logo {
+  @apply block w-10 object-cover;
+}
+
+@keyframes dropdown{
+  to{
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+/* ===================================NAVBAR End================================= */
+
+/* ===================================Footer Start================================= */
+
+footer {
+  @apply pt-24 mt-24  bg-primary;
+}
+
+.footer-categories {
+  @apply flex items-center justify-center flex-wrap gap-6 mb-16 xs:max-md:flex-col;
+}
+
+.footer-categories a {
+  backdrop-filter: blur(20px);
+  @apply px-6 py-2 text-white bg-slate-50 bg-opacity-20 rounded-md;
+}
+
+.Footer-copyright {
+  @apply py-2 text-white text-center border-solid border-white border-t-2 border-l-0 border-r-0;
+}
+
+/* ===================================Footer End================================= */
+
+/* ===================================Error-page-start================================= */
+.center {
+  @apply mt-20 text-center;
+}
+/* ===================================Error-page-end============================== */
+
+/* ===================================Home-Start============================== */
+
+/* ===================================Posts-Start============================== */
+.post-container,
+.author-post-container,
+.category-post-container {
+  @apply grid  grid-cols-3 gap-10 xs:max-md:grid-cols-1 md:max-xl:grid-cols-2 xs:max-md:gap-3;
+}
+
+.post {
+  @apply bg-slate-200 p-4 rounded-lg transition duration-300 cursor-default;
+}
+
+.post:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.post-thumbnail {
+  @apply h-60 overflow-hidden;
+}
+.post-thumbnail > img {
+  @apply rounded-lg;
+}
+.post-content h3 {
+  @apply mb-2 mx-0;
+}
+
+.post-footer {
+  @apply flex justify-between items-end mt-6;
+}
+
+.post-author {
+  @apply flex gap-4 items-start;
+}
+
+.post__author-avator {
+  @apply w-10 aspect-square overflow-hidden rounded-full object-cover;
+}
+
+.blog-button {
+  @apply px-3 py-1 text-black bg-slate-300 bg-opacity-20 rounded-md transition duration-300 border-2 border-primary border-solid;
+}
+
+.blog-button:hover {
+  @apply px-3 py-1 text-white bg-primary bg-opacity-20 rounded-md;
+}
+
+/* ===================================Posts-End============================== */
+
+/* ===================================Home-end============================== */
+
+/* ===================================Post-detail-start============================== */
+
+.post-detail {
+  @apply w-1/2 m-auto py-8 bg-slate-200 rounded-md xs:max-md:w-[95%];
+}
+
+.post-detail-header {
+  @apply flex items-center justify-between my-4 xs:max-sm:flex-col xs:max-sm:gap-6;
+}
+.post-deatail-buttons {
+  @apply flex items-center gap-4;
+}
+
+.post-detail-thumbnail {
+  @apply my-4 h-fit max-h-[30rem];
+}
+.post-detail p {
+  @apply mb-3 text-justify xs:max-sm:text-sm ;
+}
+
+/* ===================================Post-detail-end============================== */
+
+/* ===================================Register-Form-start============================== */
+
+.form {
+  @apply flex flex-col gap-4;
+}
+.form > input,select {
+  @apply bg-gray-50 px-3 py-1 rounded-md;
+}
+.form > button {
+  @apply bg-primary text-white w-fit px-3 py-1 rounded-md;
+}
+.form-error-mesage {
+  @apply bg-red-500 text-white px-3 text-sm text-left  py-2 rounded-md;
+}
+
+/* ===================================Register-form-end============================== */
+
+/* ===================================Authors-Start============================== */
+
+.author-container {
+  @apply grid grid-cols-4 xs:max-md:grid-cols-2  gap-12;
+}
+.author {
+  @apply bg-slate-200 p-4 rounded-md flex items-center flex-col gap-4 transition-all duration-300 ;
+}
+.author:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.author-avator{
+    @apply w-[5rem] xs:max-sm:w-10 aspect-square overflow-hidden rounded-full object-cover;
+}
+
+.author-info{
+    @apply flex items-center gap-2 flex-col
+}
+
+/* ===================================Authors-end============================== */
+
+
+/* ===================================Profile-Start============================== */
+
+.profile-container{
+    @apply grid place-items-center text-center
+}
+
+.profile-details{
+   @apply w-full 
+}
+.avator-wrapper{
+    margin-inline:auto;
+    @apply w-40 aspect-square relative mt-4
+}
+.profile-avator{
+    @apply h-full rounded-[50%] flex items-center justify-center border-[0.7rem] border-solid border-slate-200 overflow-hidden
+}
+.avator-form{
+    @apply h-4
+}
+.avator-form input{
+    @apply invisible
+}
+
+.avator-form label,.profile-avator-button{
+@apply bg-gray-900 text-white  absolute right-4 bottom-4 w-8 h-8 grid place-items-center rounded-full
+}
+
+.profile-avator-button{
+    @apply bg-primary p-0
+}
+
+.profile-details h1{
+    @apply mt-4 text-2xl font-semibold
+}
+
+.form.profile-form{
+    margin-inline: auto;
+    @apply mt-10 w-1/2 xs:max-md:w-3/4
+}
+
+/* ===================================Profile-end============================== */
+
+/* ===================================DASHBOARD-Start============================== */
+.dashboard-container{
+    @apply flex flex-col gap-3  
+}
+
+.dashboard-posts{
+    @apply flex items-center bg-gray-200 justify-between rounded-lg px-3 py-1 xs:max-sm:flex-col xs:max-md:gap-5 
+}
+.dashboard-post-info{
+  @apply flex items-center gap-8 w-full
+}
+
+.dashboard-post-thumbnail{
+    @apply w-16 
+}
+.dashboard-post-thumbnail img{
+    @apply rounded-md 
+}
+
+.dashboard-post-buttons{
+    @apply flex items-center gap-4 
+}
+
+/* ===================================DASHBOARD-end============================== */
+
+/* ===================================CreatePost-Start============================== */
+.ql-editor{
+  height: 10rem !important;
+ @apply bg-slate-50  overflow-scroll
+}
+
+/* ===================================CreatePost-end============================== */
+
+
+/* ===================================MEDIA-QUERIES-START============================== */
+
+
+
+/* ===================================MEDIA-QUERIES-END============================== */

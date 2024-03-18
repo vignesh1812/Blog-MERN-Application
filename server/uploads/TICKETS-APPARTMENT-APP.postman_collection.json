@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "78b6de4a-a4db-40f0-af57-6773cac0c2e9",
+		"name": "TICKETS-APPARTMENT-APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32169102"
+	},
+	"item": [
+		{
+			"name": "GET ALL TICKETS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TICKET DETAIL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/sinafas",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"sinafas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ASSIGNED TICKETS ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBjM2NjNjBiNTYwNGZjMzJhNDFiMSIsInVzZXJFbWFpbCI6InN1YnJvbGUxIiwicm9sZSI6Im1haW50YWluZW5jZSIsImlhdCI6MTcwNzIxMzc2NCwiZXhwIjoxNzA3MzAwMTY0fQ.Pwf_7h1pbz_uAZ_eCrUNdfjIRy3RHmRwBspFHyuojL0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/assigned",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"assigned"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SINGLE USER TICKETS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBjM2NjNjBiNTYwNGZjMzJhNDFiMSIsInVzZXJFbWFpbCI6InN1YnJvbGUxIiwicm9sZSI6Im1haW50YWluZW5jZSIsImlhdCI6MTcwNzIxMzc2NCwiZXhwIjoxNzA3MzAwMTY0fQ.Pwf_7h1pbz_uAZ_eCrUNdfjIRy3RHmRwBspFHyuojL0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/65c0c3cc60b5604fc32a41b1/user",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"65c0c3cc60b5604fc32a41b1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET DATE BASE TICKETS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "startDate",
+							"value": "2024-01-01",
+							"type": "text"
+						},
+						{
+							"key": "endtDate",
+							"value": "2024-02-08",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/datebased/ticket",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"datebased",
+						"ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TICKET COMMENTS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBjM2NjNjBiNTYwNGZjMzJhNDFiMSIsInVzZXJFbWFpbCI6InN1YnJvbGUxIiwicm9sZSI6Im1haW50YWluZW5jZSIsImlhdCI6MTcwNzE5ODYzMSwiZXhwIjoxNzA3Mjg1MDMxfQ.sc3S_bx2gy6zB6IkzhPrvsDMFygyLYqa-eT757NTEd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/sinafas/comments",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"sinafas",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE TICKET",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBjM2NjNjBiNTYwNGZjMzJhNDFiMSIsInVzZXJFbWFpbCI6InN1YnJvbGUxIiwicm9sZSI6Im1haW50YWluZW5jZSIsImlhdCI6MTcwNzE5ODYzMSwiZXhwIjoxNzA3Mjg1MDMxfQ.sc3S_bx2gy6zB6IkzhPrvsDMFygyLYqa-eT757NTEd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/create-ticket",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"create-ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE COMMENTS FOR TICKET",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBjM2NjNjBiNTYwNGZjMzJhNDFiMSIsInVzZXJFbWFpbCI6InN1YnJvbGUxIiwicm9sZSI6Im1haW50YWluZW5jZSIsImlhdCI6MTcwNzE5ODYzMSwiZXhwIjoxNzA3Mjg1MDMxfQ.sc3S_bx2gy6zB6IkzhPrvsDMFygyLYqa-eT757NTEd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/AFADGDA/commnets",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"AFADGDA",
+						"commnets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ASSIGN TICKET TO MAINTAINENCE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBjM2NjNjBiNTYwNGZjMzJhNDFiMSIsInVzZXJFbWFpbCI6InN1YnJvbGUxIiwicm9sZSI6Im1haW50YWluZW5jZSIsImlhdCI6MTcwNzE5ODYzMSwiZXhwIjoxNzA3Mjg1MDMxfQ.sc3S_bx2gy6zB6IkzhPrvsDMFygyLYqa-eT757NTEd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/asfasf",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"asfasf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE  FOR CLOSE THE TICKETS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YzBjM2NjNjBiNTYwNGZjMzJhNDFiMSIsInVzZXJFbWFpbCI6InN1YnJvbGUxIiwicm9sZSI6Im1haW50YWluZW5jZSIsImlhdCI6MTcwNzE5ODYzMSwiZXhwIjoxNzA3Mjg1MDMxfQ.sc3S_bx2gy6zB6IkzhPrvsDMFygyLYqa-eT757NTEd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/asfasf/status",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"asfasf",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET RECENT ASSIGNED TICKETS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/tickets/recent/assigned",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"tickets",
+						"recent",
+						"assigned"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
